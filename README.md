@@ -24,6 +24,13 @@
 **Solution:** **Project Nexus** unifies these disconnected experiences into a single, mobile-first "Super App". It's not just a dashboard; it's a proactive assistant that predicts what a student needs next—whether it's the next class location, today's lunch menu, or a summary of a long dean's email.
 
 ---
+---
+
+
+
+
+---
+
 
 ## 🏗️ Architecture
 
