@@ -1,0 +1,65 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  uid       String   @unique
+  password  String
+  batch     String
+  class     String
+  role      String   @default("student") // student, admin
+  
+  lostItems LostFound[]
+  timetable Timetable[]
+}
+
+model MessMenu {
+  id        String @id @default(cuid())
+  day       String @unique // Monday, Tuesday, etc.
+  breakfast String
+  lunch     String
+  dinner    String
+}
+
+model LostFound {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  location    String
+  contact     String
+  type        String   // lost, found
+  status      String   @default("open") // open, resolved
+  
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  
+  createdAt   DateTime @default(now())
+}
+
+model Timetable {
+  id      String @id @default(cuid())
+  userId  String
+  user    User   @relation(fields: [userId], references: [id])
+  
+  day     String
+  subject String
+  time    String
+  room    String
+}
+
+model NearbyPlaces {
+  id          String @id @default(cuid())
+  name        String
+  description String
+  rating      Float
+  category    String // e.g., Food, Study, Recreation
+}

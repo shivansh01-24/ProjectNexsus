@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 Project Nexus – Campus Super-App
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16.1-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-7.3-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
+![Team](https://img.shields.io/badge/Team-AVAKAYA-orange?style=for-the-badge)
+
+**A Centralized Digital Ecosystem for Student Life Management**
+
+[Features](#-features) • [Quick Start](#-quick-start) • [Demo Credentials](#-demo-credentials) • [Team](#-team)
+
+</div>
+
+---
+
+## 🌟 Features
+
+### Core Capabilities
+- ✅ **Daily Pulse** - Real-time mess menu & Mail Summarizer
+- 🤖 **Smart Integration** - Intelligent tools to simplify student life
+- 📊 **Academic Cockpit** - Live timetable, attendance tracking & CGPA analysis
+- 🤝 **Student Exchange** - Lost & found community board with status tracking
+- 🗺️ **Explorer Guide** - Curated campus hangouts & study spots
+- 📱 **Mobile First** - Fully responsive design for on-the-go access
+- 🔒 **Secure Auth** - Role-based access control with NextAuth.js
+- ⚡ **Zero Latency** - Optimistic UI updates & local database
+
+### Advanced Features
+- **Mail Summarizer** - Condenses lengthy emails into actionable bullet points
+- **Live Timetable** - Real-time "Up Next" class predictions & animations
+- **Performance Analytics** - Term-by-term CGPA visualization & trend analysis
+- **Nexus Assistant** - Conversational interface for app navigation
+- **Subject Analysis** - Detailed attendance breakdown per faculty
+
+---
+
+## 🚀 Quick Start
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/project-nexus.git
+cd project-nexus
+
+# 2. Install dependencies
+npm install
+
+# 3. Initialize Database
+npx prisma db push
+npx prisma db seed
+
+# 4. Run the application
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 5. Open in browser
+# Navigate to: http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📸 Demo Credentials
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| User | Role | Username (UID) | Password |
+|------|------|----------------|----------|
+| **Rahul Sharma** | Student (CS-A) | `u123456` | `password123` |
+| **Priya Patel** | Student (CS-B) | `u123457` | `password123` |
+| **Arjun Singh** | Student (ME-A) | `u123458` | `password123` |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📖 Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Project Structure
+```
+project-nexus/
+├── prisma/                    # Database schema & seeds
+├── public/                    # Static assets
+├── src/
+│   ├── app/                   # Next.js App Router pages
+│   ├── components/            # Reusable UI components
+│   ├── lib/                   # Utilities (Prisma, Auth)
+│   └── types/                 # TypeScript definitions
+├── .env                       # Environment variables
+├── next.config.ts             # Next.js configuration
+├── package.json               # Dependencies
+└── README.md                  # This file
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Key Modules
 
-## Deploy on Vercel
+#### `Daily Pulse`
+Handles daily essentials:
+- **Mess Menu**: Fetches daily food schedule from database
+- **Mail Summarizer**: Uses keyword extraction to summarize text
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### `Academic Cockpit`
+Productivity central:
+- **Timetable**: Real-time schedule tracking
+- **CGPA Chart**: Visualizes academic progress using SVG graphs
+- **Attendance**: Tracks subject-wise attendance stats
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### `Student Exchange`
+Community marketplace:
+- **Lost & Found**: Post and track items
+- **Status Workflow**: Open -> Resolved state management
+
+---
+
+## 👥 Team
+
+<div align="center">
+<h3>Team AVAKAYA MADE THIS</h3>
+<p>Crafted with passion for the Hackathon</p>
+</div>
+
+---
+
+## 🤝 Contribution
+
+We welcome contributions! Please follow these steps:
+
+1.  **Fork the Project**
+2.  **Create your Feature Branch** (`git checkout -b feature/AmazingFeature`)
+3.  **Commit your Changes** (`git commit -m 'Add some AmazingFeature'`)
+4.  **Push to the Branch** (`git push origin feature/AmazingFeature`)
+5.  **Open a Pull Request**
+
+---
+
+<div align="center">
+Made with ❤️ by Team AVAKAYA
+</div>
